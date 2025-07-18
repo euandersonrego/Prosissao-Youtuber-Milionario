@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <!-- Meta tag para responsividade e bloqueio de zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Profissão Youtuber Milionário - O Sistema para Criar seu Ativo Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1452216332072682');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1452216332072682&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+        /* Estilos base */
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden; /* Previne scroll horizontal */
+        }
+        /* Efeito de gradiente para textos */
+        .gradient-text {
+            background: -webkit-linear-gradient(#FDE047, #F59E0B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Animação de brilho para bordas */
+        @keyframes glowing {
+            0% { box-shadow: 0 0 5px #fde047; }
+            50% { box-shadow: 0 0 20px #f59e0b; }
+            100% { box-shadow: 0 0 5px #fde047; }
+        }
+        .glowing-border {
+            animation: glowing 3s infinite;
+        }
+        
+        /* Animação de brilho para borda gradiente */
+        @keyframes glowing-gradient {
+            0% { border-color: #fde047; }
+            50% { border-color: #f59e0b; }
+            100% { border-color: #fde047; }
+        }
+        .glowing-gradient-border {
+             border-image-slice: 1;
+             animation: glowing-gradient 2s linear infinite;
+        }
+
+        /* Estilos para cards interativos */
+        .interactive-card {
+            transition: all 0.3s ease-in-out;
+            border: 1px solid #4A5568; /* Borda sutil */
+        }
+        .interactive-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            border-color: #FDE047;
+            box-shadow: 0 0 20px rgba(253, 224, 71, 0.3);
+        }
+
+        /* Estilos para o botão principal de CTA */
+        .cta-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px 0 rgba(245, 158, 11, 0.4);
+        }
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 25px 0 rgba(245, 158, 11, 0.7);
+        }
+
+        /* Animações de entrada com Intersection Observer */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Estilos para o FAQ interativo (Acordeão) */
+        .faq-question {
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .faq-question:hover {
+            background-color: #2D3748;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+            padding: 0 1.5rem;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 200px; /* Altura suficiente para a resposta */
+            padding: 1.5rem;
+        }
+        .faq-arrow {
+            transition: transform 0.5s ease;
+        }
+        .faq-item.active .faq-arrow {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Seção Herói -->
+    <header class="py-12 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-6 text-center">
+            <span class="text-sm font-semibold text-amber-400 uppercase tracking-wider reveal">PARA O ESTRATEGISTA DIGITAL QUE ODEIA A CÂMERA</span>
+            <h1 class="text-4xl md:text-6xl font-black mt-4 leading-tight reveal" style="transition-delay: 100ms;">Sua inteligência é um <span class="gradient-text">Ativo Digital.</span><br>Pare de deixá-la na gaveta.</h1>
+            <p class="text-lg md:text-xl text-gray-300 mt-6 max-w-3xl mx-auto reveal" style="transition-delay: 200ms;">Descubra o sistema passo a passo para construir um canal lucrativo no YouTube, sem precisar de carisma, sem ligar a câmera e sem gastar rios de dinheiro com equipamentos.</p>
+            <div class="mt-10 reveal" style="transition-delay: 300ms;">
+                <a href="https://pay.hotmart.com/G96243158H?checkoutMode=10" target="_blank" class="cta-button inline-block bg-amber-500 text-gray-900 font-bold text-lg rounded-lg px-10 py-4 uppercase">
+                    Quero construir minha máquina de renda
+                </a>
+                <p class="text-gray-400 mt-3 text-sm">Resultados ou seu dinheiro de volta. Risco zero.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- NOVA Seção de Ferramentas -->
+    <section class="py-16 bg-gray-800">
+        <div class="container mx-auto px-6 reveal">
+            <p class="text-center text-gray-400 font-semibold uppercase tracking-wider">UM ECOSSISTEMA COMPLETO DE FERRAMENTAS INTELIGENTES</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-10 max-w-4xl mx-auto">
+                <!-- Card ChatGPT -->
+                <div class="bg-gray-900 p-6 rounded-lg text-center interactive-card">
+                    <svg class="w-12 h-12 mx-auto text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                    <h3 class="font-bold text-xl mt-4">ChatGPT</h3>
+                    <p class="text-sm text-gray-400">Para Roteiros</p>
+                </div>
+                <!-- Card Canva -->
+                <div class="bg-gray-900 p-6 rounded-lg text-center interactive-card">
+                    <svg class="w-12 h-12 mx-auto text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                    <h3 class="font-bold text-xl mt-4">Canva</h3>
+                    <p class="text-sm text-gray-400">Para Thumbnails</p>
+                </div>
+                <!-- Card CapCut -->
+                <div class="bg-gray-900 p-6 rounded-lg text-center interactive-card">
+                     <svg class="w-12 h-12 mx-auto text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h3 class="font-bold text-xl mt-4">CapCut</h3>
+                    <p class="text-sm text-gray-400">Para Edição</p>
+                </div>
+                <!-- Card ElevenLabs -->
+                <div class="bg-gray-900 p-6 rounded-lg text-center interactive-card">
+                    <svg class="w-12 h-12 mx-auto text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                    <h3 class="font-bold text-xl mt-4">ElevenLabs</h3>
+                    <p class="text-sm text-gray-400">Para Narração</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção da Dor (A Planta na Gaveta) -->
+    <section class="py-16 md:py-24">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center reveal">
+                <h2 class="text-3xl md:text-4xl font-bold">Você tem a planta de uma máquina de fazer dinheiro.</h2>
+                <p class="text-lg text-gray-300 mt-4">Mas ela continua guardada na gaveta.</p>
+            </div>
+            <div class="mt-12 text-lg text-gray-300 space-y-6 leading-relaxed reveal">
+                <p>Você é um arquiteto de sistemas. No seu emprego, você otimiza processos. Em casa, devora conteúdo sobre como construir fontes de renda. Na sua cabeça, a planta detalhada de um canal no YouTube já existe. Você sabe os nichos, entende de SEO, já calculou o potencial.</p>
+                <p class="font-bold text-white bg-gray-800 p-6 rounded-lg interactive-card">O problema? Toda vez que você pensa em construir, você esbarra no mesmo muro. Você vê os YouTubers de sucesso – carismáticos, extrovertidos, com equipamentos caros – e a paralisia toma conta. A crença de que você precisa de "talento para a câmera" mantém seu potencial trancado.</p>
+                <p>Essa sensação de <span class="text-amber-400 font-semibold">potencial não realizado</span> é sufocante. Você sabe que é inteligente o suficiente para fazer dar certo, mas sente que falta a peça principal. E se essa peça não for carisma, e sim um manual de construção?</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção da Solução (O Manual de Construção) -->
+    <section class="py-16 md:py-24 bg-gray-800">
+        <div class="container mx-auto px-6 text-center max-w-5xl">
+            <h2 class="text-3xl md:text-4xl font-bold reveal">O E-book <span class="gradient-text">Profissão Youtuber Milionário</span> é o seu Manual de Construção.</h2>
+            <p class="text-lg md:text-xl text-gray-300 mt-6 reveal">Nós não vamos te ensinar a ser um "personagem". Nós vamos te entregar um sistema de engenharia para montar sua máquina de conteúdo, passo a passo, clique a clique.</p>
+            <div class="mt-12 grid md:grid-cols-3 gap-8 text-left">
+                <!-- Barreira 1 -->
+                <div class="bg-gray-900 p-6 rounded-lg interactive-card reveal" style="transition-delay: 100ms;">
+                    <h3 class="text-xl font-bold text-amber-400">Barreira da Escrita, DEMOLIDA.</h3>
+                    <p class="mt-3 text-gray-300">Aprenda a usar nossos prompts no ChatGPT para gerar roteiros completos e magnéticos em minutos. Nunca mais sofra com a "página em branco".</p>
+                </div>
+                <!-- Barreira 2 -->
+                <div class="bg-gray-900 p-6 rounded-lg interactive-card reveal" style="transition-delay: 200ms;">
+                    <h3 class="text-xl font-bold text-amber-400">Barreira da Voz, DEMOLIDA.</h3>
+                    <p class="mt-3 text-gray-300">Descubra como transformar seus roteiros em narrações de alta qualidade com ferramentas de IA, sem precisar de um microfone profissional (ou de gostar da sua própria voz).</p>
+                </div>
+                <!-- Barreira 3 -->
+                <div class="bg-gray-900 p-6 rounded-lg interactive-card reveal" style="transition-delay: 300ms;">
+                    <h3 class="text-xl font-bold text-amber-400">Barreira do Design, DEMOLIDA.</h3>
+                    <p class="mt-3 text-gray-300">Com nossos tutoriais de CapCut e Canva, e o acesso a modelos prontos, você criará vídeos e thumbnails profissionais, mesmo que nunca tenha editado nada na vida.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Conteúdo do E-book -->
+    <section class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto reveal">
+                <h2 class="text-3xl md:text-4xl font-bold">O Sistema Completo Para Construir Sua Máquina</h2>
+                <p class="text-lg text-gray-300 mt-4">Tudo que você precisa, do zero absoluto à monetização, em um único lugar.</p>
+            </div>
+            <div class="mt-16 max-w-2xl mx-auto reveal">
+                <div class="space-y-4 bg-gray-800 p-8 rounded-lg interactive-card">
+                    <div class="flex items-start space-x-4">
+                        <span class="text-amber-400 font-bold text-2xl mt-1">✓</span>
+                        <p><span class="font-bold text-white">Módulo 1: A Fundação</span> - Escolhendo nichos lucrativos onde você não precisa aparecer.</p>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <span class="text-amber-400 font-bold text-2xl mt-1">✓</span>
+                        <p><span class="font-bold text-white">Módulo 2: Engenharia de Conteúdo</span> - O sistema de criação de roteiros com IA.</p>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <span class="text-amber-400 font-bold text-2xl mt-1">✓</span>
+                        <p><span class="font-bold text-white">Módulo 3: A Linha de Montagem Visual</span> - Editando vídeos e thumbnails de forma rápida e profissional.</p>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <span class="text-amber-400 font-bold text-2xl mt-1">✓</span>
+                        <p><span class="font-bold text-white">Módulo 4: Otimização e Publicação</span> - O checklist para fazer o algoritmo trabalhar para você.</p>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <span class="text-amber-400 font-bold text-2xl mt-1">✓</span>
+                        <p><span class="font-bold text-white">Módulo 5: Monetização Inteligente</span> - Estratégias de afiliação e AdSense para canais de nicho.</p>
+                    </div>
+                     <div class="flex items-start space-x-4">
+                        <span class="text-amber-400 font-bold text-2xl mt-1">✓</span>
+                        <p><span class="font-bold text-white">BÔNUS: Biblioteca de Prompts de IA</span> - Dezenas de comandos prontos para gerar imagens e ideias.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Testemunhos -->
+    <section class="py-16 md:py-24 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto reveal">
+                <h2 class="text-3xl md:text-4xl font-bold">Veja o que outros estrategistas construíram:</h2>
+            </div>
+            <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testemunho 1 -->
+                <div class="bg-gray-900 p-6 rounded-lg interactive-card reveal">
+                    <p class="text-gray-300">"Eu sou analista de sistemas e sempre achei que YouTube não era pra mim. O e-book mudou tudo. Encarei como um projeto, segui os passos e meu canal sobre planilhas já me rendeu os primeiros 500 reais em afiliados. Sem nunca ter gravado meu rosto."</p>
+                    <div class="mt-4 flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-amber-400 flex items-center justify-center">
+                            <span class="text-xl font-bold text-gray-900">M</span>
+                        </div>
+                        <div class="ml-4">
+                            <p class="font-bold">Marcos P.</p>
+                            <p class="text-sm text-gray-400">Analista de Sistemas</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testemunho 2 -->
+                <div class="bg-gray-900 p-6 rounded-lg interactive-card reveal" style="transition-delay: 100ms;">
+                    <p class="text-gray-300">"A paralisia por análise era meu sobrenome. Eu tinha dezenas de ideias de canais, mas não saía do lugar. A abordagem de 'sistema' do e-book foi a chave. Em 30 dias, publiquei 8 vídeos. O sentimento de potencial realizado não tem preço."</p>
+                    <div class="mt-4 flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-amber-400 flex items-center justify-center">
+                            <span class="text-xl font-bold text-gray-900">J</span>
+                        </div>
+                        <div class="ml-4">
+                            <p class="font-bold">Juliana F.</p>
+                            <p class="text-sm text-gray-400">Engenheira de Produção</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testemunho 3 -->
+                <div class="bg-gray-900 p-6 rounded-lg interactive-card reveal" style="transition-delay: 200ms;">
+                    <p class="text-gray-300">"O que mais me pegou foi a parte de usar IA para tudo. Roteiro, voz, imagens... O método é genial para quem, como eu, trabalha em tempo integral e tem poucas horas por dia para se dedicar. Já estou planejando meu segundo canal."</p>
+                    <div class="mt-4 flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-amber-400 flex items-center justify-center">
+                            <span class="text-xl font-bold text-gray-900">R</span>
+                        </div>
+                        <div class="ml-4">
+                            <p class="font-bold">Ricardo S.</p>
+                            <p class="text-sm text-gray-400">Gerente de Projetos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção do Autor Atualizada -->
+    <section class="py-16 md:py-24">
+        <div class="container mx-auto px-6 max-w-3xl reveal">
+            <div class="bg-gray-800 p-8 rounded-lg border-t-4 border-amber-400 glowing-gradient-border">
+                <h3 class="text-2xl font-bold text-center">Uma mensagem do <span class="gradient-text">Arquiteto do Sistema</span></h3>
+                <blockquote class="mt-6 text-xl text-center text-gray-300 italic leading-relaxed">
+                    "Eu não sou um 'guru'. Sou um estrategista, assim como você. Eu descobri que o sucesso no YouTube não depende de carisma, mas de ter um sistema eficiente. Construí múltiplos canais que geram renda todos os meses, sem nunca aparecer. Criei este e-book para entregar o exato manual de construção que usei. Chega de deixar sua inteligência parada."
+                </blockquote>
+                <p class="text-center font-bold text-lg mt-6">- Anderson Rêgo</p>
+                <a href="https://www.instagram.com/euandersonrego" target="_blank" class="block text-center text-amber-400 hover:text-amber-300 transition-colors duration-300 mt-2">@euandersonrego</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Oferta (CTA Principal) -->
+    <section id="oferta" class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-6 max-w-2xl text-center reveal">
+            <h2 class="text-3xl md:text-5xl font-black">Finalmente, comece a construir <span class="gradient-text">a sua máquina.</span></h2>
+            <div class="bg-gray-800 border-2 border-amber-400 rounded-lg p-8 mt-10 shadow-2xl glowing-border">
+                <p class="text-xl font-semibold">Acesso completo e vitalício ao sistema</p>
+                <p class="text-6xl font-black my-4">R$ 97,00</p>
+                <p class="text-lg text-gray-300">ou 12x de R$ 10,03</p>
+                <a href="https://pay.hotmart.com/G96243158H?checkoutMode=10" target="_blank" class="cta-button mt-8 inline-block w-full bg-amber-500 text-gray-900 font-bold text-xl rounded-lg px-10 py-5 uppercase">
+                    Sim, quero o manual de construção!
+                </a>
+                <div class="mt-6 text-left text-gray-300 space-y-2">
+                   <p><span class="text-amber-400">✓</span> Acesso Imediato ao E-book completo</p>
+                   <p><span class="text-amber-400">✓</span> Biblioteca de Prompts de IA (Bônus)</p>
+                   <p><span class="text-amber-400">✓</span> Acesso Vitalício e Atualizações Futuras</p>
+                   <p><span class="text-amber-400">✓</span> Garantia Incondicional de 7 Dias</p>
+                </div>
+            </div>
+            <p class="text-sm text-gray-500 mt-6">Pagamento seguro processado pela Hotmart. Seus dados estão protegidos.</p>
+        </div>
+    </section>
+
+    <!-- Seção de FAQ -->
+    <section class="py-16 md:py-24">
+        <div class="container mx-auto px-6 max-w-3xl reveal">
+            <h2 class="text-3xl font-bold text-center mb-12">Perguntas Frequentes</h2>
+            <div id="faq-container" class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-gray-800 rounded-lg interactive-card">
+                    <div class="faq-question flex justify-between items-center p-6">
+                        <h3 class="font-bold text-lg">Eu realmente não preciso aparecer na câmera?</h3>
+                        <span class="faq-arrow text-amber-400 text-2xl">↓</span>
+                    </div>
+                    <div class="faq-answer text-gray-300">
+                        <p>Absolutamente não. Todo o método foi desenhado para criar canais de sucesso sem que você precise mostrar o rosto. Usamos vídeos de bancos de imagem, gravações de tela e imagens geradas por IA.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-gray-800 rounded-lg interactive-card">
+                    <div class="faq-question flex justify-between items-center p-6">
+                        <h3 class="font-bold text-lg">Preciso de algum conhecimento prévio em edição ou design?</h3>
+                        <span class="faq-arrow text-amber-400 text-2xl">↓</span>
+                    </div>
+                    <div class="faq-answer text-gray-300">
+                        <p>Não. O e-book guia você do zero absoluto, com tutoriais passo a passo em ferramentas gratuitas e fáceis de usar como CapCut e Canva.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-gray-800 rounded-lg interactive-card">
+                    <div class="faq-question flex justify-between items-center p-6">
+                        <h3 class="font-bold text-lg">Isso funciona para qualquer nicho?</h3>
+                        <span class="faq-arrow text-amber-400 text-2xl">↓</span>
+                    </div>
+                    <div class="faq-answer text-gray-300">
+                        <p>O método é mais eficaz em nichos baseados em informação, como finanças, curiosidades, história, tecnologia, etc. No e-book, ensinamos como identificar os nichos mais lucrativos para este modelo.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-gray-800 rounded-lg interactive-card">
+                    <div class="faq-question flex justify-between items-center p-6">
+                        <h3 class="font-bold text-lg">Quanto tempo leva para ter resultados?</h3>
+                        <span class="faq-arrow text-amber-400 text-2xl">↓</span>
+                    </div>
+                    <div class="faq-answer text-gray-300">
+                        <p>Isso varia muito, mas o objetivo do sistema é a eficiência. Seguindo o passo a passo, você pode ter seu primeiro vídeo publicado em poucos dias. A monetização depende do seu ritmo de publicação e do nicho escolhido.</p>
+                    </div>
+                </div>
+                 <!-- FAQ Item 5 -->
+                 <div class="faq-item bg-gray-800 rounded-lg interactive-card">
+                    <div class="faq-question flex justify-between items-center p-6">
+                        <h3 class="font-bold text-lg">E se eu não gostar do conteúdo?</h3>
+                        <span class="faq-arrow text-amber-400 text-2xl">↓</span>
+                    </div>
+                    <div class="faq-answer text-gray-300">
+                        <p>Você tem uma garantia incondicional de 7 dias. Se por qualquer motivo achar que o e-book não é para você, basta pedir o reembolso e devolveremos 100% do seu dinheiro, sem perguntas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <footer class="py-16 bg-gray-800">
+        <div class="container mx-auto px-6 text-center max-w-2xl reveal">
+            <h2 class="text-3xl font-bold">Sua planta de engenharia está pronta. <br>A decisão de construir é sua.</h2>
+            <p class="text-lg text-gray-300 mt-4">Você pode continuar apenas acumulando conhecimento, ou pode pegar o manual de construção hoje e finalmente dar a partida na sua máquina de renda.</p>
+            <div class="mt-10">
+                <a href="https://pay.hotmart.com/G96243158H?checkoutMode=10" target="_blank" class="cta-button inline-block bg-amber-500 text-gray-900 font-bold text-lg rounded-lg px-10 py-4 uppercase">
+                    Quero começar a construir agora
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Script para animações de entrada ao rolar a página
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1 // A animação começa quando 10% do elemento está visível
+        });
+
+        const revealElements = document.querySelectorAll('.reveal');
+        revealElements.forEach(el => observer.observe(el));
+
+        // Script para o FAQ interativo (Acordeão)
+        const faqContainer = document.getElementById('faq-container');
+        if (faqContainer) {
+            faqContainer.addEventListener('click', function(e) {
+                const question = e.target.closest('.faq-question');
+                if (!question) return;
+
+                const faqItem = question.parentElement;
+                
+                // Fecha todos os outros itens
+                const allItems = faqContainer.querySelectorAll('.faq-item');
+                allItems.forEach(item => {
+                    if (item !== faqItem) {
+                        item.classList.remove('active');
+                    }
+                });
+
+                // Alterna o item clicado
+                faqItem.classList.toggle('active');
+            });
+        }
+    </script>
+
+</body>
+</html>
